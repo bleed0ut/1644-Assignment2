@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h3>Add a product</h3>
+    <form method="POST" action="/toys/store">
+    <div class="form-group">
+        <label for="name-create">Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="desciption-create">Description of this product</label>
+        <input type="text" class="form-control" id="description" name="description">
+    </div>
+    <div class="form-group">
+        <label for="image-create">Image link</label>
+        <input type="text" class="form-control" id="image" name="image">
+    </div>
+    <div class="form-group">
+        <label for="price-create">Price</label>
+        <input type="number" step=0.01 class="form-control" id="price" name="price">
+    </div>
+  <button type="submit" class="btn btn-primary">Create product</button>
+</form>
+</div>

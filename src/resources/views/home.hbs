@@ -1,0 +1,22 @@
+<div class="mt-4">
+    <div class="row">
+        {{#each toys}}
+        <div class="col-sm-10 col-lg-2">
+            <div class="card card-toy-item">
+                <a href="/toys/{{this.slug}}">
+                    <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+                </a>
+                <div class="card-body">
+                    <a href="/toys/{{this.slug}}">
+                        <h5 class="card-title">{{this.name}}</h5>
+                    </a>
+                    <h6 class="card-intro">About this item</h6>
+                    <p class="card-text">{{this.description}}</p>
+                    <p class="card-price">${{this.price}}</p>
+                    <a href="#" class="btn btn-primary">Purchase</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

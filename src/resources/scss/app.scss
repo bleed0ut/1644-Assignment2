@@ -1,0 +1,130 @@
+@import 'variables';
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  color: $pink-color;
+}
+h2 {
+  color: $plum-color;
+}
+body {
+  // background-color: aliceblue;
+  cursor: url('https://cdn.custom-cursor.com/packs/6377/minimal-hello-kitty-pack.png'),
+    auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url('https://i.pinimg.com/originals/c5/b3/97/c5b397f713190be3fbf523d410be31ef.png');
+  background-size: cover;
+}
+.row{
+  margin: 4px;
+}
+
+.user-avatar{
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.card-toy-item {
+  margin-top: 16px;
+}
+.card-toy-item .card-price {
+  color: palevioletred;
+  font-weight: bold;
+}
+.card-toy-item .card-intro {
+  font-weight: bolder;
+}
+.card-body {
+  color: rgba(172, 92, 188, 0.731);
+  background-image: url('https://free4kwallpapers.com/uploads/originals/2015/08/23/hello-kitty-christmas-background.jpg');
+  background-size: 2000%;
+}
+
+.card-body h5 {
+  color: rgba(172, 92, 188, 0.731);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.card-price {
+  color: palevioletred;
+  font-weight: bold;
+}
+
+.card-img-top img {
+  width: 500px;
+  height: 500px;
+}
+
+.card-header {
+  background-color: rgb(249, 249, 249);
+  background-image: url('https://free4kwallpapers.com/uploads/originals/2015/08/23/hello-kitty-christmas-background.jpg');
+}
+
+.card-detail h2 {
+  color: rgba(141, 55, 152, 0.737);
+  font-weight: bolder;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.card-body-detail {
+  background-image: url('https://free4kwallpapers.com/uploads/originals/2015/08/23/hello-kitty-christmas-background.jpg');
+  background-size: 1200%;
+}
+.card-body-detail .card-text {
+  color: rgb(172, 92, 188);
+  font-weight: bolder;
+}
+
+
+
+//header
+.navbar {
+  background-image: url('https://i.pinimg.com/originals/f7/fa/b4/f7fab4d03fdcf0d04868e9f504eb2bfb.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.nav-link h3{
+  color: rgba(165, 83, 163, 0.767);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Times New Roman', Times, serif;
+}
+
+.navbar-brand .a {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgba(165, 83, 163, 0.767);
+}
+.navbar-brand p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgba(165, 83, 163, 0.767);
+}
+.btn {
+  background-color: rgba(197, 122, 197, 0.906);
+  font-family: serif;
+}
+.btn:hover {
+  color: aliceblue;
+}
+
+//table
+.table-first{
+  background-color: rgb(223, 149, 228);
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.table-row{
+  background-color: rgba(236, 199, 236, 0.906);
+}
+.table-title{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

@@ -1,0 +1,78 @@
+<div class="container mt-4">
+    <h3 class="table-title">My toys</h3>
+    <table class="table">
+  <thead>
+    <tr class="table-first">
+        <th scope="col">#</th>
+        <th scope="col">Toy name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Created at</th>
+        <th scope="col">Image link</th>
+        <th scope="col" colspan="4">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each toys}}
+    <tr class="table-row">
+      <th scope="row">{{sum @index 1}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.description}}</td>
+      <td>{{this.createdAt}}</td>
+      <td>{{this.image}}</td>
+      <td>${{this.price}}</td>
+      <td>
+        <a href="/toys/{{this._id}}/edit" class="btn btn-primary">Edit</a> 
+      </td>
+      <td>
+        <a href="" class="btn btn-primary" data-toggle="modal" data-id="{{this._id}}" data-target="#delete-toy-modal">Delete</a> 
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+
+{{!-- Comfirm to delete --}}
+<div id ="delete-toy-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Delete</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Arer you sure to delete this toy?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn-delete-toy" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Delete hidden form --}}
+<form name="delete-toy-form" method="POST"></form>
+
+</form>
+
+<script>
+  var toyId;
+  var deleteForm = document.forms['delete-toy-form'];
+  var btnDeleteToy = document.getElementById('btn-delete-toy');
+ 
+  document.addEventListener('DOMContentLoaded', function(){
+      $('#delete-toy-modal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        toyId = button.data('id');
+        console.log(toyId)
+  });
+ //when dialog confirm clicked
+  btnDeleteToy.onclick = function () {
+    deleteForm.action = '/toys/' + toyId + '?_method=DELETE';
+    deleteForm.submit();
+  }
+})
+</script>
